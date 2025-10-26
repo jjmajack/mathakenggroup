@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>@yield('title', 'Mathakeng Group Technology - IT Consulting & Industrial Automation')</title>
+    <link rel="icon" type="image/png" href="{{ asset('images/logos/favicon.png') }}">
     @vite(['resources/css/app.css', 'resources/js/app.js'])
     <script src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js" defer></script>
     @stack('styles')
@@ -15,7 +16,9 @@
             <div class="flex justify-between h-16">
                 <div class="flex items-center">
                     <div class="flex-shrink-0">
-                        <a href="/" class="text-2xl font-bold bg-gradient-to-r from-cyan-600 to-blue-600 bg-clip-text text-transparent">Mathakeng Group</a>
+                        <a href="/" class="flex items-center">
+                            <img src="{{ asset('images/logos/logo.svg') }}" alt="Mathakeng Group" class="h-10 w-auto">
+                        </a>
                     </div>
                 </div>
                 <div class="hidden md:flex items-center space-x-8">
@@ -42,7 +45,11 @@
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
             <div class="grid md:grid-cols-4 gap-8 mb-12">
                 <div>
-                    <h3 class="text-2xl font-bold mb-4 bg-gradient-to-r from-cyan-400 to-blue-400 bg-clip-text text-transparent">Mathakeng Group Technology</h3>
+                    <div class="mb-4">
+                        <div class="bg-white/10 backdrop-blur-sm border border-white/20 p-3 rounded-lg inline-block shadow-lg">
+                            <img src="{{ asset('images/logos/logo.svg') }}" alt="Mathakeng Group" class="h-10 w-auto">
+                        </div>
+                    </div>
                     <p class="text-slate-300 mb-6">
                         Leading IT consulting and industrial automation solutions for modern businesses.
                     </p>
